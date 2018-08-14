@@ -92,7 +92,7 @@ counting_state
 	call delay
 	goto counting_state
 	
-;---------------------------sd_lookup: 7 digit display lookup table  ---------------------------
+;---------------------------update_counter: ---------------------------
 update_counter
 	decfsz SUB_DIG
 	retlw b'0'
@@ -114,7 +114,7 @@ dig1_res	decf DIG2
 dig1_dec	decf DIG1
 	retlw b'0'
 	
-;---------------------------sd_lookup: 7 digit display lookup table  ---------------------------
+;---------------------------update_digits: ---------------------------
 update_digits
 	movlw b'1'
 	xorwf CUR_DIG,F
